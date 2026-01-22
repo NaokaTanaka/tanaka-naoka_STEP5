@@ -27,24 +27,16 @@ button.addEventListener('click', function() {
 
   setTimeout(function() {
     document.body.style.backgroundColor = "";
-    document.body.classList.remove('highlighted');
+    document.body.classList.remove('highlight');
   }, 3000);
 });
 
 // 設問3
 var toggleButton = document.getElementById('togglebutton');
 var contentArea = document.getElementById('contentArea');
-let isHighlighted = false;
 
 togglebutton.addEventListener('click', () => {
-  if (isHighlighted) {
-    contentArea.style.display = "none";
-    contentArea.textContent = "ハイライトOFF";
-  } else {
-    contentArea.style.display = "block";
-    contentArea.textContent = "ハイライトON";
-  }
-  isHighlighted = !isHighlighted;
+  contentArea.classList.toggle('highlight');
 });
 
 // 設問4、5
